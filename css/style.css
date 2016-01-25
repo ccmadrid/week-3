@@ -1,0 +1,72 @@
+/*
+This File imports all your scss partials to be compiled into one stylesheet, which you can attach to your html
+
+All the files that are prefixed with an underscore "_name-of-file.scss" are called partials - meaning that their css isn't compiled unless it's imported into an unprefixed .scss file
+*/
+/* Variables */
+/*
+	A mixin is similar to a function
+	It has multiple declarations, as well as can take arguments;
+
+
+	To Declare a mixin
+	@mixin mixin-name
+
+	To use a mixin
+	@include mixin-name
+
+	To use a mixin with arguments
+	@include($argument1, $argument2)
+*/
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #fff;
+}
+
+.primary-btn {
+  color: #3498db;
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  margin: 1em;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.primary-btn:hover {
+  background-color: darkblue;
+}
+
+.secondary-btn {
+  color: #aaa;
+  background-color: #f00;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  margin: 1em;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.secondary-btn:hover {
+  background-color: darkblue;
+}
+
+.border, ul {
+  border: 1px solid #ccc;
+}
+
+.border p, ul p {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
