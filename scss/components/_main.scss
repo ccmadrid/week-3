@@ -1,16 +1,16 @@
 @viewport { width: device-width; scale: 1; }
 
-html {
+html{
 	box-sizing: border-box;
 	text-size-adjust: 100%;
 	font-family: $verdana;
 }
 
-*, *:before, *:after {
+*, *:before, *:after{
 	box-sizing: inherit;
 }
 
-body {
+body{
 	background-color: $grey;
 	display: block;
 	padding: 2em;
@@ -19,7 +19,7 @@ body {
 	background-size: cover;
 }
 
-.text {
+.text{
 	color: $white;
 	background-color: $bg-black;
 	width: 100%;
@@ -28,13 +28,13 @@ body {
 	border-radius: 0.5em;
 }
 
-.blurb {
+.blurb{
 	max-width: 40em;
 	margin: 2em auto;
 	color: $white;
 }
 
-.main {
+.main{
 	background-color: $bg-white;
 	width: 100%;
 	max-width: 50em;
@@ -50,7 +50,7 @@ body {
 	position: relative;
 }
 
-@keyframes up {
+@keyframes up{
 	0% {
 		top: -$div-height + (-4 * $div-height);
 	}
@@ -80,7 +80,7 @@ body {
 	}
 }
 
-@keyframes up-large {
+@keyframes up-large{
 	0% {
 		top: -$div-height;
 	}
@@ -110,7 +110,7 @@ body {
 	}
 }
 
-@keyframes down {
+@keyframes down{
 	0% {
 		top: -4 * $div-height;
 	}
@@ -140,7 +140,7 @@ body {
 	}
 }
 
-@keyframes down-large {
+@keyframes down-large{
 	0% {
 		top: -4 * $div-height;
 	}
@@ -169,14 +169,15 @@ body {
 		top: 0 * $div-height;
 	}
 }
-.left {
+
+.left{
 	top: -5 * $div-height;
 	@include overshoot(down);
 	@include trans-white(0.25);
 	transition: color 250ms ease-in-out;
 }
 
-.right {
+.right{
 	top: -$div-height;
 	@include overshoot(up);
 	color: $gold;
