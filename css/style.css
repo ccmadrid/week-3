@@ -1265,12 +1265,7 @@ body {
   border-radius: 0.5em;
 }
 
-.left {
-  overflow: visible;
-  position: relative;
-}
-
-.right {
+.left, .right {
   overflow: visible;
   position: relative;
 }
@@ -1328,15 +1323,15 @@ body {
     top: -15em;
   }
   80% {
-    top: 0em;
+    top: 0;
   }
   100% {
-    top: 0em;
+    top: 0;
   }
 }
 
 .left {
-  top: -75em;
+  top: -105em;
   animation: down 10s cubic-bezier(0.475, -0.185, 0.475, 1.185) infinite;
   color: rgba(255, 255, 255, 0.25);
   transition: color 250ms ease-in-out;
@@ -1393,7 +1388,7 @@ body {
 
 .buy:hover {
   text-decoration: underline;
-  border: solid 2px #922;
+  border: solid 2px #6a0000;
 }
 
 @media only screen and (min-width: 38em) {

@@ -14,5 +14,10 @@
 */
 
 
-@mixin button($background, $font, $hover){
+@mixin trans-white($opacity){
+	color: rgba(255,255,255,$opacity);
+}
+
+@mixin overshoot($direction){
+	animation: $direction 10s cubic-bezier(0.475, -0.185, 0.475, 1.185) infinite;
 }
