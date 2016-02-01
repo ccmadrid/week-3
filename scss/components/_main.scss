@@ -1,34 +1,286 @@
-html{
-	font-family: $helvetica;
-	background-color: $white;
+// html{
+// 	font-family: $helvetica;
+// 	background-color: $white;
+// }
+
+// .primary-btn{
+// 	color: $primary;
+// 	@include button($primary, $white, darkblue);
+// }
+
+// .secondary-btn{
+// 	color: $secondary;
+
+// 	@include button(#f00, $white, darkblue);
+// }
+
+// .border{
+// 	border: 1px solid #ccc;
+// 	p{
+// 		color: blue;
+// 	}
+// }
+
+// a{
+// 	text-decoration: none;
+// 	&:hover{
+// 		text-decoration: underline;
+// 	}
+// }
+
+// ul{
+// 	@extend .border;
+// }
+
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	font-family: Verdana,sans-serif;
 }
 
-.primary-btn{
-	color: $primary;
-	@include button($primary, $white, darkblue);
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 
-.secondary-btn{
-	color: $secondary;
+body {
+	background-color: #ccc;
+	display: block;
+	padding: 2em;
+	background-image: url('../img/kobe-xi.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 
-	@include button(#f00, $white, darkblue);
 }
 
-.border{
-	border: 1px solid #ccc;
-	p{
-		color: red;
+.text {
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	max-width: 50em;
+	margin: 0 auto;
+	border-radius: 0.5em;
+}
+
+.blurb {
+	max-width: 40em;
+	margin: 2em auto;
+	color: #fff;
+}
+
+.main {
+	background-color: rgba(255,255,255,0.2);
+	width: 100%;
+	max-width: 50em;
+	margin: 0 auto;
+	padding: 0.75em;
+	overflow: hidden;
+	height: 16em;
+	border-radius: 0.5em;
+}
+
+.left, .right {
+	overflow: visible;
+	position: relative;
+}
+
+@-webkit-keyframes up {
+	0% {
+		top: -15em;
+	}
+	5% {
+		top: -30em;
+	}
+	25% {
+		top: -30em;
+	}
+	30% {
+		top: -45em;
+	}
+	50% {
+		top: -45em;
+	}
+	55% {
+		top: -60em;
+	}
+	75% {
+		top: -60em;
+	}
+	80% {
+		top: -75em;
+	}
+	100% {
+		top: -75em;
 	}
 }
 
-a{
+keyframes up {
+	0% {
+		top: -15em;
+	}
+	5% {
+		top: -30em;
+	}
+	25% {
+		top: -30em;
+	}
+	30% {
+		top: -45em;
+	}
+	50% {
+		top: -45em;
+	}
+	55% {
+		top: -60em;
+	}
+	75% {
+		top: -60em;
+	}
+	80% {
+		top: -75em;
+	}
+	100% {
+		top: -75em;
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		top: -60em;
+	}
+	5% {
+		top: -45em;
+	}
+	25% {
+		top: -45em;
+	}
+	30% {
+		top: -30em;
+	}
+	50% {
+		top: -30em;
+	}
+	55% {
+		top: -15em;
+	}
+	75% {
+		top: -15em;
+	}
+	80% {
+		top: 0;
+	}
+	100% {
+		top: 0;
+	}
+}
+
+@keyframes down {
+	0% {
+		top: -60em;
+	}
+	5% {
+		top: -45em;
+	}
+	25% {
+		top: -45em;
+	}
+	30% {
+		top: -30em;
+	}
+	50% {
+		top: -30em;
+	}
+	55% {
+		top: -15em;
+	}
+	75% {
+		top: -15em;
+	}
+	80% {
+		top: 0em;
+	}
+	100% {
+		top: 0em;
+	}
+}
+
+.left {
+	top: -75em;
+	-webkit-animation: down 10s cubic-bezier(0.475, -0.185, 0.475, 1.185) infinite;
+	        animation: down 10s cubic-bezier(0.475, -0.185, 0.475, 1.185) infinite;
+		color: rgba(255,255,255,0.25);
+		transition: color 250ms ease-in-out;
+}
+
+.right {
+	top: -15em;
+	-webkit-animation: up 10s cubic-bezier(0.475, -0.185, 0.475, 1.185) infinite;
+	        animation: up 10s cubic-bezier(0.475, -0.185, 0.475, 1.185) infinite;
+	color: #ed0;
+}
+
+.list-up, .list-down {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	height: 15rem;}
+
+.list-up li,
+.list-down li {
+	height: 15rem;
+}
+
+.list-down i {
+	font-size: 12em;
+}
+
+.list-up {
+	font-size: 1.5em;
+}
+
+.list-up li {
+	position: relative;
+	top: 2.5em;
+}
+
+.buy {
+	color: #fff;
+	display: block;
+	max-width: 10em;
+	background-color: #700;
+	padding: 2em;
+	border-radius: 0.5em;
+	margin: 2em auto;
+	overflow: hidden;
+	text-transform: uppercase;
 	text-decoration: none;
-	&:hover{
-		text-decoration: underline;
+}
+
+.buy:hover {
+	text-decoration: underline;
+	border: solid 2px #922;
+}
+
+@media only screen and (min-width: 38em) {
+	.right {
+		margin-top: 15em;
+	}
+	.left {
+		color: rgba(255,255,255,0.65);
+	}
+
+	.list-up {
+		font-size: 2em;
+	}
+
+	.main:hover > .left {
+		color: rgba(255,255,255,0.85);
 	}
 }
-
-ul{
-	@extend .border;
-}
-
