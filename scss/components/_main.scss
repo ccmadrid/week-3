@@ -52,6 +52,36 @@ body {
 
 @keyframes up {
 	0% {
+		top: -$div-height + (-4 * $div-height);
+	}
+	5% {
+		top: -2 * $div-height + (-4 * $div-height);
+	}
+	25% {
+		top: -2 * $div-height + (-4 * $div-height);
+	}
+	30% {
+		top: -3 * $div-height + (-4 * $div-height);
+	}
+	50% {
+		top: -3 * $div-height + (-4 * $div-height);
+	}
+	55% {
+		top: -4 * $div-height + (-4 * $div-height);
+	}
+	75% {
+		top: -4 * $div-height + (-4 * $div-height);
+	}
+	80% {
+		top: -5 * $div-height + (-4 * $div-height);
+	}
+	100% {
+		top: -5 * $div-height + (-4 * $div-height);
+	}
+}
+
+@keyframes up-large {
+	0% {
 		top: -$div-height;
 	}
 	5% {
@@ -103,15 +133,44 @@ body {
 		top: -$div-height;
 	}
 	80% {
-		top: 0;
+		top: 0 * $div-height;
 	}
 	100% {
-		top: 0;
+		top: 0 * $div-height;;
 	}
 }
 
+@keyframes down-large {
+	0% {
+		top: -4 * $div-height;
+	}
+	5% {
+		top: -3 * $div-height;
+	}
+	25% {
+		top: -3 * $div-height;
+	}
+	30% {
+		top: -2 * $div-height;
+	}
+	50% {
+		top: -2 * $div-height;
+	}
+	55% {
+		top: -$div-height;
+	}
+	75% {
+		top: -$div-height;
+	}
+	80% {
+		top: 0 * $div-height;
+	}
+	100% {
+		top: 0 * $div-height;
+	}
+}
 .left {
-	top: -7 * $div-height;
+	top: -5 * $div-height;
 	@include overshoot(down);
 	@include trans-white(0.25);
 	transition: color 250ms ease-in-out;
@@ -121,6 +180,8 @@ body {
 	top: -$div-height;
 	@include overshoot(up);
 	color: $gold;
+	position: relative;
+	z-index: 100;
 }
 
 .list-up{
@@ -170,10 +231,12 @@ body {
 @media only screen and (min-width: 38em) {
 	.right{
 		margin-top: $div-height;
+		@include overshoot(up-large);
 	}
 
 	.left{
 		@include trans-white(0.65);
+		@include overshoot(down-large);
 	}
 
 	.list-up{
